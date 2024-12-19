@@ -1,0 +1,57 @@
+import mysql.connector
+from mysql.connector import Error
+ 
+def execute_sql_query(query):
+    print("query",query)
+    try:
+        # Define your database connection parameters
+        config = {
+            'user': 'root',
+            'password': 'root',
+            'host': 'localhost',
+            'database': 'commandcenterdb_dev'
+        }
+        # Connect to the database
+        conn = mysql.connector.connect(**config)
+        if conn.is_connected():
+            print("Database connected successfully!")
+        else:
+            print("Failed to connect to the database.")
+            return [], []
+ 
+        # Create a cursor object
+        cursor = conn.cursor()
+ 
+        # Execute the query
+        cursor.execute(query)
+ 
+        # Fetch the results
+        results = cursor.fetchall()
+ 
+        # Get the column names
+        column_names = [i[0] for i in cursor.description]
+ 
+        # Close the cursor and connection
+        cursor.close()
+        conn.close()
+ 
+        return column_names, results
+ 
+    except mysql.connector.Error as err:
+        # Handle MySQL specific errors
+        print(f"Error: {err}")
+        return [], []
+    except Exception as e:
+        # Handle any other exceptions
+        print(f"An unexpected error occurred: {e}")
+        return [], []
+ 
+# Example usage
+if __name__ == "__main__":
+    query = "SELECT * FROM pdrmrawmaterial;"
+    column_names, results = execute_sql_query(query)
+    if column_names and results:
+        print("Column Names:", column_names)
+        print("Results:", results)
+    else:
+        print("No results or error occurred.")
