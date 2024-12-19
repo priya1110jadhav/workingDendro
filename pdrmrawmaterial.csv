@@ -1,0 +1,22 @@
+RawMaterialID,RawMaterialStatus,PrimaryFunction
+"Aloe Barbadensis",Development,Emollients/Moisturizers
+"Amyl cinnamal",Commercial,Allergens
+"Benzoyl Peroxide",Obsolete,"Anti-acne agents"
+"Benzyl salicylate",Commercial,Allergens
+"Cetearyl Alcohol",Commercial,Emulsifiers
+Coumarin,Commercial,"Falvor Ingredient"
+"Dicaprylyl Carbonate",Commercial,Emollients/Moisturizers
+"Green Tea Extract",Development,Antioxidants
+"Lauryl Laurate",Commercial,"Skin Conditioning"
+"Lauryl/Myristyl Benzoate",Commercial,"Skin Conditioning"
+Linalool,Experimental,"Falvor Ingredient"
+Phenoxyethanol,Commercial,Preservatives
+"Potassium Sorbate",Development,Preservatives
+"Salicylic Acid",Commercial,"Anti-acne agents"
+"Sodium Cocoyl Isethionate",Development,Surfactants
+"Sodium lauryl sulfate",Commercial,Surfactants
+"Stearic acid",Development,Emulsifiers
+"Titanium Dioxide",Commercial,"UV Protection (SPF)"
+Tocopherol,Commercial,Antioxidants
+"Xanthan gum",Commercial,Thickeners/Stabilizers
+"Zinc Oxide",Commercial,"UV Protection (SPF)"
